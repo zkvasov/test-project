@@ -10,17 +10,21 @@ namespace TestProject
     {
         const double PI = 3.1415;
 
-        static void Main(string[] args)
+        static double Pow(double value, int power)
         {
-            int a = 2;
-            double tmp = PI;
+            double tmp = value;
 
-            for (int i = 1; i < a; i++)
+            for (int i = 1; i < power; i++)
             {
-                tmp *= PI;
+                tmp *= value;
             }
 
-            Console.WriteLine(tmp);
+            return tmp;
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Pow(PI, 2));
         }
     }
 }
